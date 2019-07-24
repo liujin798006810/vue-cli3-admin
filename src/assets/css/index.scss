@@ -1,0 +1,121 @@
+[class^="el-icon-jh-"], [class*="el-icon-jh-"] {  
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.el-menu-vertical-admin {
+    background: #313d49;
+
+    .el-submenu__title {
+        height: 46px;
+        line-height: 46px;
+    }
+
+    .el-menu {
+        background: #313d49;
+    }
+
+    .el-menu-item, .el-submenu__title {
+        color: #b9cde5;
+        background: #313d49;
+    }
+
+    .el-submenu__title i, .el-menu-item i {
+        color: #b9cde5;
+        font-size: 16px;
+    }
+
+    .el-submenu.is-active>.el-submenu__title {
+        background: #19c5e3;
+        color: #fff;
+
+        i {
+            color: #fff;
+        }
+    }
+
+    .el-menu-item.is-active,
+    .el-submenu__title.is-active {
+        color: #19c5e3;
+
+        i {
+            color: #19c5e3; 
+        }
+    }
+
+    .el-submenu__title:hover{
+        background-color: #384456;
+        color: #fff;
+
+        i {
+            color: #fff;
+            opacity: 1;
+        }
+    }
+
+    .el-menu-item:hover{
+        background-color: #384456;
+        color:#fff;
+
+        i {
+            color: #fff;
+            opacity: 1;
+        }
+    }
+
+    .el-menu>div>.el-menu-item {
+        padding-left: 55px !important;
+    }
+
+    .el-menu>div>.el-submenu>.el-submenu__title {
+        padding-left: 55px !important;
+    }
+
+    .el-menu>div>.el-submenu>.el-menu>div>.el-submenu>.el-submenu__title {
+        padding-left: 65px !important;
+    }
+
+    .el-menu>div>.el-submenu>.el-menu>div>.el-menu-item {
+        padding-left: 65px !important;
+    }
+}
+
+.el-menu-vertical-admin.el-menu--collapse {
+    .el-submenu__title {
+        span, .el-submenu__icon-arrow {
+            display: none;
+        }
+    }
+}
+
+.el-menu-vertical-admin>li>.el-menu-item.is-active {
+    background: #19c5e3;
+    color: #fff;
+}
+
+.avatar-container {
+    .el-menu {
+        background: #2e3233;
+        color: #fff;
+        // top: 56px;
+        // padding: 0;
+
+        .el-submenu .el-submenu__title {
+            color: #fff;
+
+            i {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            &:hover {
+                background-color: #222526;
+                color: #fff;
+            }
+        }
+        
+    }
+}

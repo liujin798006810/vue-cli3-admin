@@ -1,0 +1,42 @@
+{
+    "name": "vue-admin-project",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "echarts": "^4.2.1",
+        "element-ui": "^2.4.5",
+        "nprogress": "^0.2.0",
+        "vue": "^2.6.6",
+        "vue-count-to": "^1.0.13",
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1",
+        "vuex-persistedstate": "^2.5.4",
+        "webpack-cdn-plugin": "^3.0.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.4.0",
+        "@vue/cli-service": "^3.4.0",
+        "compression-webpack-plugin": "^2.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.9.2",
+        "sass-loader": "^7.1.0",
+        "vue-cli-plugin-element": "^1.0.1",
+        "vue-template-compiler": "^2.5.21",
+        "webpack-bundle-analyzer": "^3.3.2"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}

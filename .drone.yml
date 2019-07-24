@@ -1,0 +1,57 @@
+workspace:
+  base: /data
+  path: 192.168.0.12/web/games
+
+# branches: wheel
+
+pipeline:
+  restore-cache:
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /var/tmp/cache:/cache
+  build:
+    image: node:11
+    commands:
+      - export npm_config_cache=/data/.npm
+      - npm install
+      - npm run build
+    # when:
+    #   event: [ tag push ]
+    #  branch: master
+  deploy-prod:
+    when:
+      event: tag
+      # branch: master
+    image: drillster/drone-rsync
+    hosts:
+       -  dev1.lsutech.com
+    source: ./dist/
+    delete: true
+    target: /home/dingjun/html3/
+    user: dingjun
+    secrets: [ rsync_key ]
+    script:
+      - sudo rsync -az /home/dingjun/html3/ /data/nginx/web/html/
+  deploy-dev:
+    when:
+      event: push
+      # branch: master
+    image: drillster/drone-rsync
+    hosts:
+       -  192.168.0.12
+    source: ./dist/
+    delete: true
+    target: /home/dingjun/wwwroot/admin-project/
+    user: dingjun
+    secrets: [ rsync_key ]
+
+  rebuild-cache:
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /var/tmp/cache:/cache
